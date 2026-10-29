@@ -2,7 +2,7 @@
 
 The personal portfolio of **Joseph Mario Danubio (Creax)** — a Computer Science / Software Engineering student at BINUS in Bekasi, based in West Jakarta.
 
-It is one static page: plain HTML, CSS, and JavaScript. There is no framework, package manager, or build step. The design is a transit map: one station board for Creax, three coloured lines for three public projects, and every stop is a real capability. A compact **Other work** list covers concept, interface, and home-lab projects that have no public repository or demo.
+It is one static page: plain HTML, CSS, and JavaScript. There is no framework, package manager, or build step. The design is a transit map: one station board for Creax, three coloured lines for three public projects, and every stop is a real capability. A compact **Other work** list covers concept, interface, and home-lab projects; the hoax-detection notebook is linked, while no public repository or hosted demo exists.
 
 ## What is here
 
@@ -91,7 +91,7 @@ git push
 - **Verso** is a native Rust desktop app. There is no hosted demo.
 - **Graduation Monitor** is a Supabase-backed advisor dashboard. There is no public demo or seeded public account.
 - **Jitu** is a team project for Kelompok 7, HCI LA83. The public repository is a fork of `lutanoraorvis/Jitu`, and the current public build is a front-end prototype: its verdict is simulated in the browser rather than produced by a trained model.
-- **Other work** entries come from the attached CV. The hoax-detection concept reports 98.94% test accuracy; the Figma prototype and the home-lab deployment have no public repository or demo, and are marked accordingly. The phone number on the CV is intentionally not published.
+- **Other work** entries come from the attached CV. The hoax-detection concept reports 98.94% test accuracy and links to its public Colab notebook; it has no public repository or hosted demo. The Figma prototype and the home-lab deployment have no public link, and are marked accordingly. The phone number on the CV is intentionally not published.
 - The portrait is Joseph’s supplied photo at `assets/img/portrait.png`. Do not replace it with a stock image.
 
 ## Type and licence

@@ -25,7 +25,7 @@
   </script>
   <link rel="preload" href="assets/fonts/overpass-latin-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/overpass-mono-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=12">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -409,7 +409,7 @@
           <h3 id="other-work-heading">Other work</h3>
           <p>Connecting services · 3</p>
         </div>
-        <p class="other-work__intro">Concept, interface, and home-lab projects. None has a public repository or demo link, so none is drawn on the map.</p>
+        <p class="other-work__intro">Concept, interface, and home-lab projects. None has a public repository or hosted demo, so none is drawn on the map.</p>
         <ol class="other-list" aria-labelledby="other-work-heading">
           <li class="other-item">
             <span class="other-item__index" aria-hidden="true">C1</span>
@@ -417,7 +417,10 @@
               <h4>Hoax Detection Web Application</h4>
               <p class="other-item__type">Concept project · three-person team</p>
               <p>A fake-news classifier trained in Google Colab with logistic regression on a public dataset. The team evaluated it with classification metrics and a confusion matrix and reported 98.94% accuracy on the test set.</p>
-              <span class="other-item__missing">No public repository or demo</span>
+              <div class="other-item__links">
+                <a class="other-item__link" href="https://colab.research.google.com/drive/10QOGPxLyrOfFL0dtp9K4CyUvuiWIDRQt?usp=sharing" target="_blank" rel="noopener">Open Colab notebook <span aria-hidden="true">↗</span></a>
+                <span class="other-item__missing">Notebook only · no hosted demo</span>
+              </div>
             </div>
             <dl class="other-item__facts">
               <div><dt>Built with</dt><dd>Python · Google Colab · logistic regression</dd></div>
