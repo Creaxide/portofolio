@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joseph Mario Danubio (Creax) — Software engineering portfolio</title>
+  <meta name="description" content="Joseph Mario Danubio (Creax) is a Computer Science – Software Engineering student at BINUS Bekasi. Three public projects, plus interface design and home-lab work.">
+  <meta name="theme-color" content="#F4F3EE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0C0E11" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Joseph Mario Danubio (Creax) — Software engineering portfolio">
+  <meta property="og:description" content="A transit map of three public projects, with interface design and self-hosted infrastructure work.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      var theme = null;
+      try { theme = localStorage.getItem('creax-theme'); } catch (error) {}
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      root.dataset.theme = theme;
+    }());
+  </script>
+  <link rel="preload" href="assets/fonts/overpass-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/overpass-mono-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css?v=12">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="Joseph Mario Danubio (Creax) — back to top">
+        <svg class="brand__mark" width="30" height="24" viewBox="0 0 30 24" aria-hidden="true" focusable="false">
+          <path d="M1 12h6" stroke="currentColor" stroke-width="2"/>
+          <path d="M7 12 11 5h17" stroke="var(--line-1)" stroke-width="2"/>
+          <path d="M7 12h21" stroke="var(--line-2)" stroke-width="2"/>
+          <path d="M7 12 11 19h17" stroke="var(--line-3)" stroke-width="2"/>
+        </svg>
+        <span class="brand__word">Creax</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about" data-nav="about">About</a>
+        <a href="#projects" data-nav="projects">Projects</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch color theme">
+        <span class="theme-toggle__track" aria-hidden="true"><span class="theme-toggle__dot"></span></span>
+        <span class="theme-toggle__text" id="theme-label" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="service-strip">
+      <div class="service-strip__inner">
+        <span class="service-strip__tag"><span class="service-strip__square" aria-hidden="true"></span>Portfolio network</span>
+        <span class="service-strip__meta">West Jakarta · 2026</span>
+        <span class="service-strip__meta service-strip__meta--lines">3 public lines</span>
+        <span class="service-strip__clock"><span class="service-strip__dot" aria-hidden="true"></span><span id="local-time">WIB --:--</span></span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1 class="visually-hidden">Joseph Mario Danubio (Creax) — software engineering portfolio</h1>
+
+    <section class="map-section" aria-labelledby="map-heading">
+      <h2 class="visually-hidden" id="map-heading">Project network</h2>
+      <div class="map-frame">
+        <div class="map-chrome map-chrome--top">
+          <span>Network map / 01</span>
+          <span>Schematic · not to scale</span>
+        </div>
+
+        <div class="map" id="network-map" role="group" aria-label="Project network map">
+          <div class="map-board">
+            <p class="map-board__name">Creax<span class="map-board__mark" aria-hidden="true"></span></p>
+            <p class="map-board__role">Software engineering student</p>
+            <p class="map-board__place">BINUS · Bekasi</p>
+            <div class="map-board__bottom">
+              <span class="map-board__you"><span class="you-dot" aria-hidden="true"></span>You are here</span>
+              <span>CRX · 2026</span>
+            </div>
+          </div>
+
+          <span class="map-connector" aria-hidden="true"></span>
+
+          <svg class="map-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path class="line line--trunk" d="M23 50 H31"/>
+            <g class="line-group" data-line="verso">
+              <path class="line line--verso" d="M31 50 L38 22 H75"/>
+            </g>
+            <g class="line-group" data-line="graduation">
+              <path class="line line--graduation" d="M31 50 H75"/>
+            </g>
+            <g class="line-group" data-line="jitu">
+              <path class="line line--jitu" d="M31 50 L38 78 H75"/>
+            </g>
+          </svg>
+
+          <div class="map-stations" aria-hidden="true">
+            <span class="station station--verso" style="--x:44%;--y:22%;--d:.42s"></span>
+            <span class="station station--verso" style="--x:53%;--y:22%;--d:.50s"></span>
+            <span class="station station--verso" style="--x:62%;--y:22%;--d:.58s"></span>
+            <span class="station station--graduation" style="--x:44%;--y:50%;--d:.46s"></span>
+            <span class="station station--graduation" style="--x:53%;--y:50%;--d:.54s"></span>
+            <span class="station station--graduation" style="--x:62%;--y:50%;--d:.62s"></span>
+            <span class="station station--jitu" style="--x:44%;--y:78%;--d:.50s"></span>
+            <span class="station station--jitu" style="--x:53%;--y:78%;--d:.58s"></span>
+            <span class="station station--jitu" style="--x:62%;--y:78%;--d:.66s"></span>
+          </div>
+
+          <div class="map-stops" aria-hidden="true">
+            <span class="stop stop--verso" style="--x:44%;--y:22%;--d:.46s">8 formats</span>
+            <span class="stop stop--verso" style="--x:53%;--y:22%;--d:.54s">Batch</span>
+            <span class="stop stop--verso" style="--x:62%;--y:22%;--d:.62s">Local only</span>
+            <span class="stop stop--graduation" style="--x:44%;--y:50%;--d:.50s">RBAC + RLS</span>
+            <span class="stop stop--graduation" style="--x:53%;--y:50%;--d:.58s">Priority</span>
+            <span class="stop stop--graduation" style="--x:62%;--y:50%;--d:.66s">Import</span>
+            <span class="stop stop--jitu" style="--x:44%;--y:78%;--d:.54s">Claims</span>
+            <span class="stop stop--jitu" style="--x:53%;--y:78%;--d:.62s">Verdicts</span>
+            <span class="stop stop--jitu" style="--x:62%;--y:78%;--d:.70s">Evidence</span>
+          </div>
+
+          <a class="terminus terminus--verso" href="#verso" data-line="verso" style="--y:22%;--d:.72s">
+            <span class="terminus__top"><span class="terminus__code">V</span><span>Line 01</span></span>
+            <span class="terminus__name">Verso</span>
+            <span class="terminus__desc">Desktop format converter</span>
+            <svg class="terminus__arrow" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <a class="terminus terminus--graduation" href="#graduation-monitor" data-line="graduation" style="--y:50%;--d:.80s">
+            <span class="terminus__top"><span class="terminus__code">G</span><span>Line 02</span></span>
+            <span class="terminus__name">Graduation Monitor</span>
+            <span class="terminus__desc">Advisor dashboard</span>
+            <svg class="terminus__arrow" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <a class="terminus terminus--jitu" href="#jitu" data-line="jitu" style="--y:78%;--d:.88s">
+            <span class="terminus__top"><span class="terminus__code">J</span><span>Line 03</span></span>
+            <span class="terminus__name">Jitu</span>
+            <span class="terminus__desc">Hoax verifier</span>
+            <svg class="terminus__arrow" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+
+        <div class="map-chrome map-chrome--bottom">
+          <div class="map-legend" aria-label="Line key">
+            <span class="legend-item legend-item--verso"><span class="legend-item__line" aria-hidden="true"></span>Verso</span>
+            <span class="legend-item legend-item--graduation"><span class="legend-item__line" aria-hidden="true"></span>Graduation Monitor</span>
+            <span class="legend-item legend-item--jitu"><span class="legend-item__line" aria-hidden="true"></span>Jitu</span>
+            <span class="legend-item legend-item--you"><span class="legend-item__square" aria-hidden="true"></span>You are here</span>
+          </div>
+          <span class="map-note">Stops mark built capabilities</span>
+        </div>
+      </div>
+
+      <div class="mobile-route">
+        <div class="mobile-route__head">
+          <span>Route index</span>
+          <span>3 public lines</span>
+        </div>
+        <a class="mobile-line mobile-line--verso" href="#verso">
+          <span class="mobile-line__body">
+            <span class="mobile-line__top"><span class="mobile-line__code">V · Line 01</span><span class="mobile-line__name">Verso</span></span>
+            <span class="mobile-line__desc">Desktop format converter</span>
+            <span class="mobile-line__stops">8 formats · Batch · Local only</span>
+          </span>
+          <svg class="icon-arrow" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M2 7h10M7.5 2.5 12 7l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+        <a class="mobile-line mobile-line--graduation" href="#graduation-monitor">
+          <span class="mobile-line__body">
+            <span class="mobile-line__top"><span class="mobile-line__code">G · Line 02</span><span class="mobile-line__name">Graduation Monitor</span></span>
+            <span class="mobile-line__desc">Advisor dashboard</span>
+            <span class="mobile-line__stops">RBAC + RLS · Priority engine · Import / export</span>
+          </span>
+          <svg class="icon-arrow" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M2 7h10M7.5 2.5 12 7l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+        <a class="mobile-line mobile-line--jitu" href="#jitu">
+          <span class="mobile-line__body">
+            <span class="mobile-line__top"><span class="mobile-line__code">J · Line 03</span><span class="mobile-line__name">Jitu</span></span>
+            <span class="mobile-line__desc">Hoax verifier</span>
+            <span class="mobile-line__stops">Claims · Verdicts · Evidence</span>
+          </span>
+          <svg class="icon-arrow" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M2 7h10M7.5 2.5 12 7l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="section-head">
+        <h2 id="about-heading">About</h2>
+        <p class="section-meta"><span>Operator</span><span>CRX / 01</span></p>
+      </div>
+
+      <div class="about-grid">
+        <figure class="portrait">
+          <div class="portrait__frame">
+            <img class="portrait__image" src="assets/img/portrait.png" alt="Portrait of Joseph Mario Danubio" width="325" height="385" loading="lazy" decoding="async">
+            <span class="portrait__tag" aria-hidden="true">Operator / CRX</span>
+          </div>
+          <figcaption>Joseph Mario Danubio / West Jakarta</figcaption>
+        </figure>
+
+        <div class="about-copy">
+          <p class="about-lede">I’m Joseph Mario Danubio, a Computer Science – Software Engineering student at BINUS in Bekasi. I also go by Creax.</p>
+          <p>I build tools that make complicated things easier to read: a converter that shows what a format change will cost, an advisor dashboard that turns graduation rules into a ranked to-do list, and a hoax checker that keeps its evidence visible. I also design interfaces in Figma and run a small home lab on Proxmox VE, Nginx, MariaDB, and Cloudflare.</p>
+          <p>Most of my work sits between a messy input and a clear decision. I care about hierarchy, spacing, and navigation that make an interface legible without explanation, and I like software that tells you what it is doing. I work in teams and stay open to feedback.</p>
+
+          <dl class="fact-list">
+            <div class="fact-row"><dt>Based</dt><dd>West Jakarta, Indonesia</dd></div>
+            <div class="fact-row"><dt>Studying</dt><dd>BINUS University</dd></div>
+            <div class="fact-row"><dt>Campus</dt><dd>Bekasi, Indonesia</dd></div>
+            <div class="fact-row"><dt>Program</dt><dd>Computer Science – Software Engineering</dd></div>
+            <div class="fact-row"><dt>Graduation</dt><dd>2026 (expected)</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="skills">
+        <div class="skills__head">
+          <h3>Skills</h3>
+          <p>Grouped by use, not by score.</p>
+        </div>
+        <dl class="skill-table">
+          <div class="skill-row">
+            <dt><span class="skill-row__mark" aria-hidden="true"></span>Languages</dt>
+            <dd><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">SQL</span><span class="tag">Rust</span></dd>
+          </div>
+          <div class="skill-row">
+            <dt><span class="skill-row__mark" aria-hidden="true"></span>Interface</dt>
+            <dd><span class="tag">Figma</span><span class="tag">Interactive prototyping</span><span class="tag">Layout &amp; hierarchy</span></dd>
+          </div>
+          <div class="skill-row">
+            <dt><span class="skill-row__mark" aria-hidden="true"></span>Frameworks &amp; runtime</dt>
+            <dd><span class="tag">egui / eframe</span><span class="tag">jQuery</span><span class="tag">Supabase JS</span></dd>
+          </div>
+          <div class="skill-row">
+            <dt><span class="skill-row__mark" aria-hidden="true"></span>Data</dt>
+            <dd><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">MariaDB</span><span class="tag">Auth &amp; RLS</span></dd>
+          </div>
+          <div class="skill-row">
+            <dt><span class="skill-row__mark" aria-hidden="true"></span>Infrastructure</dt>
+            <dd><span class="tag">Proxmox VE</span><span class="tag">Nginx</span><span class="tag">Cloudflare</span><span class="tag">Docker</span><span class="tag">Linux (desktop)</span><span class="tag">Ubuntu Server</span><span class="tag">Windows</span></dd>
+          </div>
+          <div class="skill-row">
+            <dt><span class="skill-row__mark" aria-hidden="true"></span>Tools</dt>
+            <dd><span class="tag">Git / GitHub</span><span class="tag">Cargo</span><span class="tag">GitHub Pages</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects" aria-labelledby="projects-heading">
+      <div class="section-head">
+        <h2 id="projects-heading">Projects</h2>
+        <p class="section-meta"><span>3 public projects</span><span>3 other projects</span></p>
+      </div>
+
+      <div class="project-list">
+        <article class="project project--verso" id="verso" aria-labelledby="verso-title">
+          <div class="project__field" data-code="V">
+            <div class="project__route"><span class="project__code">V</span><span>Line 01</span></div>
+            <h3 class="project__name" id="verso-title">Verso</h3>
+            <p class="project__tagline">Desktop format converter</p>
+
+            <ol class="route-stops" aria-label="Verso capabilities">
+              <li>
+                <span class="route-stops__dot" aria-hidden="true"></span>
+                <span class="route-stops__label">8 formats</span>
+                <span class="route-stops__note">Document formats</span>
+              </li>
+              <li>
+                <span class="route-stops__dot" aria-hidden="true"></span>
+                <span class="route-stops__label">Loss warnings</span>
+                <span class="route-stops__note">Before conversion</span>
+              </li>
+              <li>
+                <span class="route-stops__dot" aria-hidden="true"></span>
+                <span class="route-stops__label">Batch / folders</span>
+                <span class="route-stops__note">Collision-safe output</span>
+              </li>
+            </ol>
+
+            <div class="project__stack">
+              <span>Stack</span>
+              <p>Rust · egui / eframe</p>
+            </div>
+          </div>
+
+          <div class="project__panel">
+            <div class="project__meta"><span>Desktop application</span><span class="status">Public repository · MIT</span></div>
+            <p class="project__desc">A native desktop converter for eight document formats. Verso warns before a lossy conversion, reports what changed afterward, handles batches and folders, and never uploads a file or changes the source.</p>
+            <dl class="project__facts">
+              <div><dt>Built with</dt><dd>Rust · egui / eframe</dd></div>
+              <div><dt>Runs on</dt><dd>Windows · macOS · Linux</dd></div>
+              <div><dt>License</dt><dd>MIT</dd></div>
+            </dl>
+            <div class="project__actions">
+              <a class="button" href="https://github.com/Creaxide/verso" target="_blank" rel="noopener">
+                View repository
+                <svg class="icon-arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 10 10 2M4 2h6v6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              </a>
+              <p class="demo-missing"><span class="demo-missing__label">Demo</span><span>A public demo link has not been supplied.</span></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project--graduation" id="graduation-monitor" aria-labelledby="graduation-title">
+          <div class="project__field" data-code="G">
+            <div class="project__route"><span class="project__code">G</span><span>Line 02</span></div>
+            <h3 class="project__name" id="graduation-title">Graduation Monitor</h3>
+            <p class="project__tagline">Advisor dashboard</p>
+
+            <ol class="route-stops" aria-label="Graduation Monitor capabilities">
+              <li>
+                <span class="route-stops__dot" aria-hidden="true"></span>
+                <span class="route-stops__label">RBAC + RLS</span>
+                <span class="route-stops__note">Role-aware access</span>
+              </li>
+              <li>
+                <span class="route-stops__dot" aria-hidden="true"></span>
+                <span class="route-stops__label">Priority engine</span>
+                <span class="route-stops__note">Gap ÷ semesters left</span>
+              </li>
+              <li>
+                <span class="route-stops__dot" aria-hidden="true"></span>
+                <span class="route-stops__label">Import / export</span>
+                <span class="route-stops__note">CSV, XLSX, PDF</span>
+              </li>
+            </ol>
+
+            <div class="project__stack">
+              <span>Stack</span>
+              <p>HTML · CSS · JavaScript · Supabase</p>
+            </div>
+          </div>
+
+          <div class="project__panel">
+            <div class="project__meta"><span>Web dashboard</span><span class="status">Public repository</span></div>
+            <p class="project__desc">An advisor dashboard for tracking graduation requirements across SKS, Comserv, SAT, Beelingua, certifications, and failed courses. A rule-based engine ranks advisees by how far they are from target and how many semesters remain.</p>
+            <dl class="project__facts">
+              <div><dt>Built with</dt><dd>HTML · CSS · JavaScript · Supabase</dd></div>
+              <div><dt>Access</dt><dd>Dosen AA write · Kaprodi read-only</dd></div>
+              <div><dt>Data</dt><dd>PostgreSQL · Auth · RLS</dd></div>
+            </dl>
+            <div class="project__actions">
+              <a class="button" href="https://github.com/Creaxide/graduation-monitor" target="_blank" rel="noopener">
+                View repository
+                <svg class="icon-arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 10 10 2M4 2h6v6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              </a>
+              <p class="demo-missing"><span class="demo-missing__label">Demo</span><span>A public demo link has not been supplied.</span></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project--jitu" id="jitu" aria-labelledby="jitu-title">
+          <div class="project__field" data-code="J">
+            <div class="project__route"><span class="project__code">J</span><span>Line 03</span></div>
+            <h3 class="project__name" id="jitu-title">Jitu</h3>
+            <p class="project__tagline">Hoax verifier</p>
+
+            <ol class="route-stops" aria-label="Jitu capabilities">
+              <li>
+                <span class="route-stops__dot" aria-hidden="true"></span>
+                <span class="route-stops__label">Claims</span>
+                <span class="route-stops__note"><span lang="id">Klaim</span> submitted</span>
+              </li>
+              <li>
+                <span class="route-stops__dot" aria-hidden="true"></span>
+                <span class="route-stops__label">Verdicts</span>
+                <span class="route-stops__note">Hoax · not hoax · unverified</span>
+              </li>
+              <li>
+                <span class="route-stops__dot" aria-hidden="true"></span>
+                <span class="route-stops__label">Evidence</span>
+                <span class="route-stops__note">Fact-checker sources</span>
+              </li>
+            </ol>
+
+            <div class="project__stack">
+              <span>Stack</span>
+              <p>HTML · CSS · JavaScript · jQuery</p>
+            </div>
+          </div>
+
+          <div class="project__panel">
+            <div class="project__meta"><span>Team web app</span><span class="status">Public fork · front-end prototype</span></div>
+            <p class="project__desc">A team-built hoax checker for Indonesian claims. A <span lang="id">Klaim</span> is checked against <span lang="id">Bukti</span> from fact-checkers and given a <span lang="id">Putusan</span>: Hoax, Tidak Hoax, or Belum Terverifikasi. The public build is a front-end prototype; its verdict is simulated in the browser.</p>
+            <dl class="project__facts">
+              <div><dt>Built with</dt><dd>HTML · CSS · JavaScript · jQuery</dd></div>
+              <div><dt>Team</dt><dd>Kelompok 7 · HCI LA83</dd></div>
+              <div><dt>Repo</dt><dd>Public fork of lutanoraorvis/Jitu</dd></div>
+            </dl>
+            <div class="project__actions">
+              <a class="button" href="https://github.com/Creaxide/Jitu" target="_blank" rel="noopener">
+                View repository
+                <svg class="icon-arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 10 10 2M4 2h6v6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              </a>
+              <p class="demo-missing"><span class="demo-missing__label">Demo</span><span>A public demo link has not been supplied.</span></p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="other-work">
+        <div class="other-work__head">
+          <h3 id="other-work-heading">Other work</h3>
+          <p>Connecting services · 3</p>
+        </div>
+        <p class="other-work__intro">Concept, interface, and home-lab projects. None has a public repository or demo link, so none is drawn on the map.</p>
+        <ol class="other-list" aria-labelledby="other-work-heading">
+          <li class="other-item">
+            <span class="other-item__index" aria-hidden="true">C1</span>
+            <div class="other-item__main">
+              <h4>Hoax Detection Web Application</h4>
+              <p class="other-item__type">Concept project · three-person team</p>
+              <p>A fake-news classifier trained in Google Colab with logistic regression on a public dataset. The team evaluated it with classification metrics and a confusion matrix and reported 98.94% accuracy on the test set.</p>
+              <span class="other-item__missing">No public repository or demo</span>
+            </div>
+            <dl class="other-item__facts">
+              <div><dt>Built with</dt><dd>Python · Google Colab · logistic regression</dd></div>
+              <div><dt>Result</dt><dd>98.94% test accuracy</dd></div>
+              <div><dt>Focus</dt><dd>Model evaluation · confusion matrix</dd></div>
+            </dl>
+          </li>
+          <li class="other-item">
+            <span class="other-item__index" aria-hidden="true">C2</span>
+            <div class="other-item__main">
+              <h4>Website UI Design</h4>
+              <p class="other-item__type">Exam project · Figma</p>
+              <p>A complete website interface prototype: structured layouts, navigation flow, and visual components, with hierarchy, spacing, and consistency applied across the screens. The prototype simulates navigation.</p>
+              <span class="other-item__missing">No public prototype link</span>
+            </div>
+            <dl class="other-item__facts">
+              <div><dt>Tool</dt><dd>Figma</dd></div>
+              <div><dt>Output</dt><dd>Interactive prototype</dd></div>
+              <div><dt>Scope</dt><dd>Layout · navigation · components</dd></div>
+            </dl>
+          </li>
+          <li class="other-item">
+            <span class="other-item__index" aria-hidden="true">C3</span>
+            <div class="other-item__main">
+              <h4>Self-Hosted Web Application Deployment</h4>
+              <p class="other-item__type">Personal learning project · home lab</p>
+              <p>A virtualized home-lab deployment: Proxmox VE hosts an existing web app with Nginx and MariaDB, reached through a Cloudflare-managed domain and DNS. The lab also runs Cloudreve, Pi-hole, and a Docker-hosted Claude MCP service.</p>
+              <span class="other-item__missing">No public repository or demo</span>
+            </div>
+            <dl class="other-item__facts">
+              <div><dt>Environment</dt><dd>Proxmox VE</dd></div>
+              <div><dt>Stack</dt><dd>Nginx · MariaDB · Cloudflare</dd></div>
+              <div><dt>Also</dt><dd>Cloudreve · Pi-hole · Docker</dd></div>
+            </dl>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="contact__inner">
+        <div class="contact__head">
+          <h2 id="contact-heading">Contact</h2>
+          <p class="contact__meta">Direct line · no contact form</p>
+        </div>
+
+        <div class="contact__rows">
+          <div class="contact-row">
+            <span class="contact-row__label">Email</span>
+            <a class="contact-row__value" href="mailto:josephmario360@gmail.com">josephmario360@gmail.com</a>
+            <div class="contact-row__actions">
+              <button class="copy" type="button" data-copy="josephmario360@gmail.com">Copy email</button>
+              <a class="contact-row__open" href="mailto:josephmario360@gmail.com">
+                Open mail
+                <svg class="icon-arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-row__label">GitHub</span>
+            <a class="contact-row__value" href="https://github.com/Creaxide" target="_blank" rel="noopener">github.com/Creaxide</a>
+            <div class="contact-row__actions">
+              <a class="contact-row__open" href="https://github.com/Creaxide" target="_blank" rel="noopener">
+                Open profile
+                <svg class="icon-arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 10 10 2M4 2h6v6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-row contact-row--static">
+            <span class="contact-row__label">Based</span>
+            <span class="contact-row__value">West Jakarta, Indonesia</span>
+            <span class="contact-row__note">GMT+7</span>
+          </div>
+        </div>
+
+        <p class="contact__status" id="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>Joseph Mario Danubio · West Jakarta · 2026</p>
+      <p>Plain HTML, CSS &amp; JavaScript, with no build step.</p>
+      <a href="#top">Back to top
+        <svg class="icon-arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 10V2M2.5 5.5 6 2l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
