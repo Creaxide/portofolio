@@ -1,6 +1,6 @@
 # portofolio
 
-The personal portfolio of **Joseph Mario Danubio (Creax)** — a Computer Science / Software Engineering student at BINUS in Bekasi, based in West Jakarta.
+The personal portfolio of **Joseph Mario Danubio (Creax)** — a Computer Science / Software Engineering student at BINUS in Bekasi.
 
 It is one static page: plain HTML, CSS, and JavaScript. There is no framework, package manager, or build step. The design is a transit map: one station board for Creax, three coloured lines for three public projects, and every stop is a real capability. A compact **Other work** list covers concept, interface, and home-lab projects; the hoax-detection notebook is linked, while no public repository or hosted demo exists.
 
