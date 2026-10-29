@@ -1376,6 +1376,18 @@ button {
   border-color: var(--accent);
 }
 
+.button--outline {
+  color: var(--ink);
+  background: transparent;
+  border-color: var(--ink);
+}
+
+.button--outline:hover {
+  color: var(--bg);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
 .demo-missing {
   display: flex;
   align-items: center;

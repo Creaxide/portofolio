@@ -43,10 +43,10 @@ The About section uses `assets/img/portrait.png`, displayed in a 4:5 frame with 
 
 ### Add a demo link
 
-Each project currently marks the demo as unavailable, because no public demo URL was supplied. When one exists, replace the `<p class="demo-missing">…</p>` block with a real link:
+Graduation Monitor already links to its live demo. Verso and Jitu still mark the demo as unavailable. When one exists, replace the `<p class="demo-missing">…</p>` block with a secondary demo link:
 
 ```html
-<a class="button" href="https://example.com/demo" target="_blank" rel="noopener">Open demo</a>
+<a class="button button--outline" href="https://example.com/demo" target="_blank" rel="noopener">Open demo</a>
 ```
 
 Do not add a demo link for a project that has no public deployment.
@@ -89,7 +89,7 @@ git push
 ## Honest notes
 
 - **Verso** is a native Rust desktop app. There is no hosted demo.
-- **Graduation Monitor** is a Supabase-backed advisor dashboard. There is no public demo or seeded public account.
+- **Graduation Monitor** is a Supabase-backed advisor dashboard. Live demo: `https://creaxide.github.io/graduation-monitor/`. Access depends on the deployed Supabase environment; no credentials are listed here.
 - **Jitu** is a team project for Kelompok 7, HCI LA83. The public repository is a fork of `lutanoraorvis/Jitu`, and the current public build is a front-end prototype: its verdict is simulated in the browser rather than produced by a trained model.
 - **Other work** entries come from the attached CV. The hoax-detection concept reports 98.94% test accuracy and links to its public Colab notebook; it has no public repository or hosted demo. The Figma prototype and the home-lab deployment have no public link, and are marked accordingly. The phone number on the CV is intentionally not published.
 - The portrait is Joseph’s supplied photo at `assets/img/portrait.png`. Do not replace it with a stock image.
