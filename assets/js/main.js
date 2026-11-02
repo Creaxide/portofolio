@@ -212,4 +212,134 @@
     window.addEventListener("resize", requestCurrent);
     updateCurrent();
   }
-}());
+
+  /* --- anime.js animations --- */
+  var anime = window.anime || {};
+
+  // Reveal project cards on scroll with subtle up motion
+  if (!('anime' in window)) {
+    var animeScript = document.createElement('script');
+    animeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js';
+    animeScript.integrity = 'sha512-o7qZRkFc6yZXhI6G9B3bFqVmB3jQ7dFeDh2jR/eteIovnQVx9tnGyfQb6eGa4feG2XeXR2xu/ObR/23iyRaZ5UQ==';
+    animeScript.crossOrigin = 'anonymous';
+    animeScript.onload = initAnimeAnimations;
+    document.head.appendChild(animeScript);
+  } else {
+    initAnimeAnimations();
+  }
+
+  function initAnimeAnimations() {
+    // Animate project cards fade-in on load with slight stagger
+    var projects = document.querySelectorAll('.project');
+    if (projects.length > 0) {
+      anime({
+        targets: projects,
+        opacity: [0, 1],
+        translateY: [20, 0],
+        easing: 'ease-out',
+        duration: 600,
+        delay: function(el, i) { return i * 100 },
+        complete: function() {
+          // Ensure elements stay visible
+          projects.forEach(function(el) { el.style.opacity = '1'; });
+        }
+      });
+    }
+
+    // Animate station dots on map with the existing CSS delay pattern but using anime
+    var stations = document.querySelectorAll('.station');
+    if (stations.length > 0) {
+      anime({
+        targets: stations,
+        opacity: [0, 1],
+        easing: 'cubic-bezier(0.2, 0.7, 0.2, 1)',
+        duration: 400,
+        delay: function(el, i) { return 300 + (i * 80) }
+      });
+    }
+
+    // Animate terminus links on hover with scale up
+    var termini = document.querySelectorAll('.terminus');
+    if (termini.length > 0) {
+      Array.prototype.forEach.call(termini, function (link) {
+        link.addEventListener('mouseenter', function() {
+          anime({
+            targets: link.querySelector('.terminus__name'),
+            scale: [1, 1.05],
+            easing: 'easeOutExpo',
+            duration: 150
+          });
+        });
+
+        link.addEventListener('mouseleave', function() {
+          anime({
+            targets: link.querySelector('.terminus__name'),
+            scale: [1.05, 1],
+            easing: 'easeOutExpo',
+            duration: 150
+          });
+        });
+      });
+    }
+
+    // Animate route stops fade-in with the var(--d) delay pattern
+    var routeStops = document.querySelectorAll('.route-stops li');
+    if (routeStops.length > 0) {
+      anime({
+        targets: routeStops,
+        opacity: [0, 1],
+        translateY: [10, 0],
+        easing: 'ease-out',
+        duration: 450,
+        delay: function(el, i) { return 200 + (i * 50) }
+      });
+    }
+
+    // Subtle pulse on copy button success
+    var copyButtons = document.querySelectorAll('.copy');
+    if (copyButtons.length > 0) {
+      Array.prototype.forEach.call(copyButtons, function (btn) {
+        btn.addEventListener('click', function() {
+          var originalBg = btn.style.background;
+          anime({
+            targets: btn,
+            backgroundColor: '#111418',
+            easing: 'linear',
+            duration: 200,
+            complete: function() {
+              anime({
+                targets: btn,
+                backgroundColor: originalBg || '',
+                easing: 'easeOutQuad',
+                duration: 300
+              });
+            }
+          });
+        });
+      });
+    }
+
+    // Intersection observer for section fade-ins
+    var sections = document.querySelectorAll('.section:not(.map-section)');
+    if (sections.length > 0) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            anime({
+              targets: entry.target,
+              opacity: [0, 1],
+              translateX: [20, 0],
+              easing: 'ease-out',
+              duration: 500
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(function(section) {
+        observer.observe(section);
+      });
+    }
+  }
+})();
